@@ -41,7 +41,7 @@ function App() {
         {/* TODO: map 메소드를 이용해서 user 리스트를 렌더링하세요.  */}
         {/* 이름: John, 나이: 20 [삭제] 버튼이 하나의 행에 나올 수 있도록 해보세요. (hint: flex) */}
         {users.map(({id,name,age})=>(
-          <li>이름:{name}, 나이: {age} <button onClick={()=>removeUser(id)}>삭제</button></li>
+          <li key={id}>이름:{name}, 나이: {age} <button onClick={()=>removeUser(id)}>삭제</button></li>
         ))}
       </ul>
     </>
